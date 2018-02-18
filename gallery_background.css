@@ -14,22 +14,6 @@ hr {
   box-shadow: 1px 1px 10px black;
 }
 
-aside#left_nav {
-  background-color: #292929;
-  background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
-  box-shadow: 0 0 10px #000;
-}
-
-div#filter_form_box {
-  background-color: #292929;
-  background-image: url("https://www.transparenttextures.com/patterns/maze-black.png");
-  box-shadow: inset 0 0 10px black;
-}
-}
-
-div.cell {
-  box-shadow: inset 0 0 5px black;
-}
 
 .preview {
 /*background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");*/

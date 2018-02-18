@@ -59,18 +59,21 @@
 
     <!--- End! page info & mission statement  --->
 
-<!---  Filter & Search Forms   --->
-      <aside id="left_nav">
-        <!--- layout views --->
-        <div class="views">
+<!---  [ Filter & Search Forms ]   --->
+      <aside id="left_nav">     <!-- 1-column-2-row grid --->
+
+        <!--- [ layout views options ] --->
+        <div class="views">   <!--- 2-column-1-row grid --->
           <button class="alpha" title="single view"><img id="alpha" src="images/alpha.png" /></button>
           <button class="beta" title="grid view"><img id="beta" src="images/beta.png" /></button>
         </div>
+        <!--- [END layout views options ] --->
 
-        <div id="filter_form_box">
-          <form id="filter_form" action="" method="" >  <!--- creates a form containing form controls; the 'action' attribute contains the URL to receive the information collected; the 'method' attribute with 'get'/'post' value sends the information; the 'id' attributes helps distinguish the form --->
+        <!--- [ filter options ] --->
+        <!---div id="filter_form_box" --->
+          <form id="filter_form" action="" method="" >  <!--- 1-column-multi-row grid --->
 
-            <div class="cell">
+            <div class="cell">    <!-- 2-column-1-row grid --->
               <label  id="reset" for="reset" > <!--- enables users to either click on the form control or the label to select, the 'for' attribute states which form control the label belongs to --->
                 HOME
               </label>
@@ -80,7 +83,8 @@
             </div>
 
           </form>
-        </div>
+        <!--- /div --->
+        <!--- [END filter options] --->
 
       </aside>
 

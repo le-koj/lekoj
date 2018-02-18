@@ -19,9 +19,6 @@
   grid-template-areas: "project_title"
                        "parent_name";
 
-  /* set gap between grids */
-  grid-row-gap: 2px;
-
   border: 1px solid black;
   -webkit-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
   -moz-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
@@ -61,7 +58,7 @@
                    0 10px 10px rgba(0,0,0,.2),
                    0 20px 20px rgba(0,0,0,.3);
 
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   -webkit-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
      -moz-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
           border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
@@ -71,7 +68,7 @@
 #parent_name {
   grid-area: parent_name;
   justify-self: center;    /* place logo to center */
-  align-self: center;     /* center of column-grid */
+  align-self: start;     /* center of column-grid */
   width: auto;
 
   padding-left: 10px;
@@ -83,7 +80,7 @@
 	font-size: 20px;
 	font-weight: 100;
 
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   -webkit-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
      -moz-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
           border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
@@ -119,6 +116,29 @@ aside {
   min-width: 100px;
   max-width: 115px;
 
+  margin-top: 10px;
+
+  background-color: #292929;
+  background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
+  box-shadow: 0 0 10px #000;
+
+  /* set display as grid */
+  display: grid;
+
+  /* set 1-column grid */
+  grid-template-columns: [start] 115px [end];
+
+  /* set as 2-row-grid */
+  grid-template-rows: [start] 45px [middle] auto [end];
+
+  /* set gap between rows */
+  grid-row-gap: 1px;
+
+  /* set grid area */
+  grid-template-areas: "views"
+                       "filter_form";
+
+  /*border: 1px solid blue;*/
   -webkit-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
 	   -moz-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
 	        border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
@@ -130,74 +150,117 @@ aside {
 
 
 div.views{
-  width: 98%;
-  margin: 5px auto;
-}
+  grid-area: views;
+  width: 100%;
+  margin-top: 2.5px;
+  padding-right: 2px;
 
+  /* set display as grid */
+  display: grid;
 
-#left_nav .alpha{
-  background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) repeat 9px center;
-  height: 40px;
-  width: 40px;
-  margin-left: 9%;
-  -webkit-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
-	   -moz-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
-	        border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
-  display: inline-block;
-  box-shadow: inset 0 0 10px #000000;
-}
+  /* set as 2-column grid */
+  grid-template-columns: [start] repeat(2, 1fr) [end];
 
+  /* set as 1-row grid */
+  grid-template-rows: [start] 100% [end];
 
-#left_nav .alpha:hover {
-  box-shadow: inset 0 0 5px #000000;
-  -webkit-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
-     -moz-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
-          border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
-}
+  /* set grid area */
+  grid-template-areas: "alpha beta";
 
-#left_nav .alpha:focus {
-  background-color: #ff0000;
-  outline: none;
-}
-
-
-#left_nav .beta{
-  background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) repeat 9px center;
-  height: 40px;
-  width: 40px;
-  -webkit-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
-	   -moz-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
-	        border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
-  margin-left: 8%;
-  display: inline;
-  box-shadow: inset 0 0 10px #000000;
-}
-
-
-#left_nav .beta:hover {
-  box-shadow: inset 0 0 5px #000000;
+  /*border: 1px solid red;*/
   -webkit-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
      -moz-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
           border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
 }
 
 
-#left_nav .beta:focus {
+.alpha{
+  grid-area: alpha;
+  justify-self: center;
+  align-self: center;
+
+  background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) repeat 9px center;
+  height: 40px;
+  width: 40px;
+
+  /*border: 1px solid black;*/
+  -webkit-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+	   -moz-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+	        border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+
+  box-shadow: inset 0 0 10px #000000;
+}
+
+
+.alpha:hover {
+  box-shadow: inset 0 0 5px #000000;
+  -webkit-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+     -moz-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+          border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+}
+
+.alpha:focus {
   background-color: #ff0000;
   outline: none;
 }
 
 
-#left_nav #search_form_box {
-  width: 98%;
-  padding: 5px;
-  margin: 5px auto;
+.beta{
+  grid-area: beta;
+  justify-self: center;
+  align-self: center;
+
+  background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) repeat 9px center;
+  height: 40px;
+  width: 40px;
+
+  /*border: 1px solid black;*/
+  -webkit-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+	   -moz-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+	        border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+
+  box-shadow: inset 0 0 10px #000000;
 }
 
-#left_nav #filter_form_box {
+
+.beta:hover {
+  box-shadow: inset 0 0 5px #000000;
+  -webkit-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+     -moz-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+          border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+}
+
+
+.beta:focus {
+  background-color: #ff0000;
+  outline: none;
+}
+
+#filter_form {
+  grid-area: filter_form;
   width: 98%;
   padding: 5px;
   margin: 5px auto;
+  margin-right: 1.5px;
+
+  background-color: #292929;
+  background-image: url("https://www.transparenttextures.com/patterns/maze-black.png");
+  box-shadow: inset 0 0 10px black;
+
+  /* set display as grid */
+  display: grid;
+
+  /* set as 1-column grid */
+  grid-template-columns: [start] 98% [end];
+
+  /* set as multi-row */
+  grid-template-rows: [start] auto [end];
+
+  /* set auto rows */
+  grid-auto-rows: auto;
+
+  /* set default grid of new elements */
+  grid-auto-flow: row;
 }
 
 input {
@@ -205,14 +268,30 @@ input {
 }
 
 div.cell {
+
+  /* set display as grid */
+  display: grid;
+
+  /* set as 2-colum grid */
+  grid-template-columns: [start] 80% [middle] 20% [end];
+
+  /* set as 1-row grid */
+  grid-template-rows: [start] auto [end];
+
+  /* set gap between columns */
+  grid-column-gap: 1px;
+
+  /* set grid area */
+  grid-template-areas: "label checkbox_container";
+
+
   -webkit-border-radius: 1em;
 	   -moz-border-radius: 1em;
 	        border-radius: 1em;
 }
 
 label {
-  /*margin-left: 7px;*/
-  width: 60%;
+  grid-area: label;
 }
 
 #reset {
@@ -220,9 +299,8 @@ label {
 }
 
 .checkbox_container {
-  display: inline-block;
-  float: right;
-  width: 20%;
+  grid-area: checkbox_container;
+  justify-self: center;
 }
 
     /*  [ END Filter & Search Forms ] */
