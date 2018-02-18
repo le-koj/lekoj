@@ -445,21 +445,62 @@ figcaption{
 
 
 /*  Aside-Right, Upcoming Photos  */
-aside#thumbnail_scroll {
+#thumbnail_scroll {
+  top: 12em;
+  right:1%;
+
   width: 17%;
   min-width: 150px;
   max-width: 150px;
   max-height: 60%;
   overflow-y: scroll;
+
+  padding-top: 2px;
+  padding-bottom: 2px;
+
+  /* set display as grid */
+  display: grid;
+
+  /* set as 1-column grid */
+  grid-template-columns: [start] 100% [end];
+
+  /* set as multi-row grid */
+  grid-auto-flow: row;
+
+  -webkit-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+     -moz-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+          border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+
+  box-shadow: inset 0 0 10px black;
+}
+
+.thumbnail {
+  width: 90%;
+  margin: 5px auto;
+  padding: 2px;
+
+  /* set as grid */
+  display: grid;
+
+  /* set as 1-column grid */
+  grid-template-columns: [start] 100% [end];
+
+  /* set as 1-row grid */
+  grid-template-rows: [start] auto [end];
+
+  /*border: 1px solid green;*/
   -webkit-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
      -moz-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
           border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
 }
 
-aside#thumbnail_scroll div {
-  width: 90%;
-  margin: 10px auto;
-  padding: 2px;
+#thumbnail_scroll img{
+  width: 100%;
+
+  /*border: 1px solid red;*/
+  -webkit-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+     -moz-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+          border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
 }
 
 

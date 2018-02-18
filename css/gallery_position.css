@@ -17,29 +17,16 @@
   position: relative;
 }
 
-/*  Aside-Right, Upcoming Photos  */
-aside#thumbnail_scroll {
-  top: 14em;
-  right:1%;
-  display: inline;
-}
-
-
 
 /* MAIN GALLERY */
-
 
 #photo_gallery {
   position: static;
 }
 
-
-
 figure#alpha_gallery {
   position: static;
 }
-
-
 
 
 /* Footer */
