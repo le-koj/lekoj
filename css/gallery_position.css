@@ -1,0 +1,133 @@
+
+aside {
+  position: fixed;
+}
+
+/*  Filter & Search Forms */
+aside#left_nav {
+  left: 2%;
+}
+
+aside div form#search_form input {
+  /*display: inline-block;*/
+}
+
+div.checkbox_container {
+  display: inline-block;
+}
+
+
+.preview {
+  position: fixed;
+  top: 0px;
+}
+
+.previewbackground {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.preview figure {
+  position: relative;
+}
+
+/*  Aside-Right, Upcoming Photos  */
+aside#thumbnail_scroll {
+  top: 14em;
+  right:1%;
+  display: inline;
+}
+
+
+
+/* MAIN GALLERY */
+
+
+section#photo_gallery {
+  position: static;
+}
+
+
+
+figure#alpha_gallery {
+  position: static;
+}
+
+
+
+
+/* Footer */
+footer#footer {
+  position: fixed;
+  bottom: 0px;
+  clear: both;
+}
+
+footer ul li {
+  display: inline-block;
+}
+
+#contacts {
+  position: absolute;
+}
+
+#credits {
+  position: absolute;
+}
+
+#copyright{
+  position: relative;
+  top: 0.2em;
+}
+
+.link{
+  position: relative;
+  top: 0.2em;
+}
+
+
+/*    ABOUT PAGE */
+
+.icons {
+  position:fixed;
+  /*border: 1px solid black;*/
+}
+
+.creed {
+  position:fixed;
+}
+
+
+/*    ABOUT ARTICLES */
+
+.main-article {
+  position: fixed;
+}
+
+#close-button {
+  position: absolute;
+  border: 1px solid #0C0C0C;
+}
+
+.articles {
+  position: absolute;
+}
+
+#photographer {
+  position: absolute;
+}
+
+.ebox {
+  position: fixed;
+}
+
+#email {
+  position: absolute;
+}
+
+#credList {
+  position: fixed;
+}

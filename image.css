@@ -1,0 +1,76 @@
+#logo {
+  width: 40%;
+  /*border: 1px solid black;*/
+}
+
+#thumbnail_scroll img{
+  width: 100%;
+}
+
+
+/* GALLERY IMAGES */
+
+
+#photo_gallery img{
+  width: 100%;
+  -webkit-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+     -moz-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+          border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+}
+
+
+img.pop {
+  padding-bottom: 30px;
+	background: radial-gradient(closest-side at 50% 95%, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 90%);
+}
+
+/* END */
+
+.preview_image {
+    display: block;
+    height: 100%;
+    width: auto;
+    margin: 0 auto;
+
+}
+
+
+
+/* button images */
+
+img#alpha{
+  width: 100%;
+}
+
+
+img#beta{
+  width: 100%;
+}
+
+
+/* ABOUT */
+
+#laptop {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#dreadlocks {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#lens {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#canonFoto {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#canonFilm {
+  width: 100%;
+  margin: 0 auto;
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>MitchKoj Print Exhibition</title>
+		    <meta charset="UTF-8" />
+		    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Le Koj" />
+		    <link rel="shortcut icon" href="../favicon.ico">
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+		    <link rel="stylesheet" type="text/css" href="css/slicebox.css" />
+		    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+        <link rel="stylesheet" type="text/css" href="css/gallery_position.css" />
+        <link rel="stylesheet" type="text/css" href="css/gallery_layout.css" />
+        <link rel="stylesheet" type="text/css" href="css/gallery_text.css" />
+        <link rel="stylesheet" type="text/css" href="gallery_background.css" />
+        <link rel="stylesheet" type="text/css" href="image.css" />
+        <script type="text/javascript"  src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+		    <script type="text/javascript" src="js/modernizr.custom.46884.js"></script>
+	</head>
+
+	<body class="body_container">
+<!--- header    --->
+
+			<div class="codrops-top clearfix">
+
+				<a href="about.html" id="homebutton"><img id="logo" src="images/logo" alt = "MitchKoj logo" /><span class ="right">LE KOJ</span></a>
+
+				<span class="right">
+
+          <div class="Shine"><a href="about.html" id="request">ABOUT</a></div>
+
+					<a id="icredit" style="cursor:default" >Images by <strong>LE KOJ</strong></a>
+					<a id="galleryButton" href="index.html"><strong>PORTRAIT GALLERY</strong></a>
+				</span>
+			</div>
+
+    <!---   End! Header   --->
+
+<!---  Page Info & Mission statement  --->
+      <section id="title_head">
+        <hgroup>
+          <h1 id="project_title"  title="Main Gallery">EXPLORE</h1>
+            <hr/>
+          <h3 id="parent_name"  title="Author">LE KOJ</h3>
+        </hgroup>
+
+
+        <article  id="mission_statement">
+          <!---
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in r
+            eprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </p>
+          --->
+        </artcile>
+      </section>
+
+    <!--- End! page info & mission statement  --->
+
+<!---  Filter & Search Forms   --->
+      <aside id="left_nav">
+        <!--- layout views --->
+        <div class="views">
+          <button class="alpha" title="single view"><img id="alpha" src="images/alpha.png" /></button>
+          <button class="beta" title="grid view"><img id="beta" src="images/beta.png" /></button>
+        </div>
+
+        <div id="filter_form_box">
+          <form id="filter_form" action="" method="" >  <!--- creates a form containing form controls; the 'action' attribute contains the URL to receive the information collected; the 'method' attribute with 'get'/'post' value sends the information; the 'id' attributes helps distinguish the form --->
+            <div class="cell">
+            <label  id="reset" for="reset" > <!--- enables users to either click on the form control or the label to select, the 'for' attribute states which form control the label belongs to --->
+              HOME
+            </label>
+            <div class="checkbox_container">
+              <input id="home" type="checkbox" name="reset" value="Reset"  checked />  <!--- creates several different forms, creates a checkbox to be checked, the value of the 'name' attribute along with the value of the 'value' attribute are sent together to server if checkbox is checked, 'checked' attribute makes the checkbox the default checked checkbox --->
+            </div>
+            </div>
+          </form>
+        </div>
+
+      </aside>
+
+    <!--- End! filter & search forms  --->
+
+<!---   Aside-Right, Upcoming Photos  --->
+      <aside  id="thumbnail_scroll">
+
+      </aside>
+
+      <!--- End! aside-right, upcoming photos  --->
+
+
+
+<!--- preview element  ---->
+
+      <div class= 'preview' onclick="$(this).fadeOut()" hidden>
+          <div  class="previewbackground"></div>
+          <figure>
+            <img class='preview_image pop' src="" />
+            <figcaption></figcaption>
+          </figure>
+      </div>
+
+        <!--- end preview element   --->
+
+
+
+<!---  Main Gallery --->
+     <section id="photo_gallery"  title="album_gallery">
+       <div id="holder">
+
+       </div>
+     </section>
+
+  <!---  End! main gallery --->
+
+
+
+  <footer id="footer">
+    <ul>  <!--- creates an unordered list --->
+      <li class="fOptions"  id="copyright">Copyright (c) 2017 <span id="aName">Le Koj</span></li> <!--- creates a list item in ul --->
+
+      <li class="fOptions"  id="contacts">
+        <a class="link" href="#">Contact</a>
+
+        <div class="ebox" data-match= "contacts" hidden="hidden">
+          <p id="email">koj@lekoj.com</p>
+        </div>
+
+      </li>
+
+      <li class="fOptions"  id="credits">
+        <a class="link" href="#">Credits</a>
+        <ul id="credList" data-match= "credits" hidden="hidden">
+          <li id="cred1"><a src="">www.tympanus.net/codrops/2011/09/05/slicebox-3d-image-slider/</a></li>
+          <li id="cred2"><a src="">www.edgewebfonts.adobe.com/fonts</a></li>
+          <li id="cred3"><a src="">www.static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png</a></li>
+          <li id="cred4"><a src="">www.transparenttextures.com</a></li>
+        </ul>
+      </li>
+    </ul>
+  </footer>
+
+    <script type="text/javascript" src="inventory.js"></script>
+    <script type="text/javascript" src="albumEngine.js"></script>
+    <script type="text/javascript" src="gObjects.js"></script>
+    <script type="text/javascript" src="gEvents.js"></script>
+    <script type="text/javascript" src="spark.js"></script>
+    <script type="text/javascript" >
+      (function($){
+        $(document).ready( function() {
+              var elObj = new GO(),      // set up gallery element objects
+                  resp = new GE();       // initiate gallery event response
+
+            resp.binder(elObj.thumbnailBox.Images, 'click', resp.prev);   // bind click action to thumbnail images
+            resp.binder(elObj.album.Photos, 'click', resp.prev);
+            resp.binder(elObj.button.Alpha, 'click', resp.lBClick);
+            resp.binder(elObj.button.Beta, 'click', resp.rBClick);
+            resp.binder(elObj.checkbox, 'click', resp.figFilter);
+            document.onscroll = resp.feedback;   // bind scroll action to document
+            elObj.contacts.hover(resp.onHove, resp.onLeave);
+            elObj.credits.hover(resp.onHove, resp.onLeave);
+        });
+      })(jQuery);
+    </script>
+  </body>

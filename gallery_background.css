@@ -1,0 +1,90 @@
+body.body_container {
+  background-color: #87898c;
+  background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
+}
+
+#mission_statement {
+  background-color: #c0c0c0;
+  background-image: url("https://www.transparenttextures.com/patterns/buried.png");
+}
+
+hr {
+  visibility: hidden;
+  background-color: #292929;
+  box-shadow: 1px 1px 10px black;
+}
+
+aside#left_nav {
+  background-color: #292929;
+  background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
+  box-shadow: 0 0 10px #000;
+}
+
+div#filter_form_box {
+  background-color: #292929;
+  background-image: url("https://www.transparenttextures.com/patterns/maze-black.png");
+  box-shadow: inset 0 0 10px black;
+}
+}
+
+div.cell {
+  box-shadow: inset 0 0 5px black;
+}
+
+.preview {
+/*background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");*/
+/*  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);  */
+}
+
+.previewbackground {
+  background: #e4ebe9 url(../images/texture3.jpg) repeat top left;
+ -webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  -o-filter: blur(1px);
+  -ms-filter: blur(1px);
+  filter: blur(1px);
+  opacity: 0.9;
+}
+
+
+aside#thumbnail_scroll {
+  /*background-color: rgb(255,255,255,0.5);
+  background-image: url("https://www.transparenttextures.com/patterns/fabric-plaid.png"); */
+  box-shadow: inset 0 0 10px black;
+
+}
+
+footer {
+  background-color: #c0c0c0;
+  box-shadow: inset 0 0 10px black;
+  box-shadow: 0 0 10px #000;
+}
+
+.about_container {
+	/*background-image: url(../images/passion.jpg);
+	background-repeat: no-repeat;
+	background-size: cover; */
+	background-color: #b21428;
+	font-family: "PT Sans Narrow", Arial, sans-serif;
+	font-size: 13px;
+	font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    min-width: 320px;
+}
+
+#email {
+  background-color: #c0c0c0;
+  box-shadow: inset 0 0 10px black;
+  box-shadow: 0 0 10px #000fff;
+}
+
+#credList {
+  background-color: #c0c0c0;
+  box-shadow: inset 0 0 10px black;
+  box-shadow: 0 0 10px #000fff;
+}
