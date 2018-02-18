@@ -38,6 +38,14 @@
     <!---   End! Header   --->
 
 <!---  Page Info & Mission statement  --->
+
+      <div id="title_head">   <!-- 1-column-2-row grid --->
+          <h1 id="project_title"  title="Main Gallery">EXPLORE</h1>
+
+          <h3 id="parent_name"  title="Author">LE KOJ</h3>
+      </div>
+
+      <!---
       <section id="title_head">
         <hgroup>
           <h1 id="project_title"  title="Main Gallery">EXPLORE</h1>
@@ -45,19 +53,9 @@
           <h3 id="parent_name"  title="Author">LE KOJ</h3>
         </hgroup>
 
-
-        <article  id="mission_statement">
-          <!---
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in r
-            eprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          </p>
-          --->
-        </artcile>
+        <article  id="mission_statement"></artcile>
       </section>
+      --->
 
     <!--- End! page info & mission statement  --->
 
@@ -71,14 +69,16 @@
 
         <div id="filter_form_box">
           <form id="filter_form" action="" method="" >  <!--- creates a form containing form controls; the 'action' attribute contains the URL to receive the information collected; the 'method' attribute with 'get'/'post' value sends the information; the 'id' attributes helps distinguish the form --->
+
             <div class="cell">
-            <label  id="reset" for="reset" > <!--- enables users to either click on the form control or the label to select, the 'for' attribute states which form control the label belongs to --->
-              HOME
-            </label>
-            <div class="checkbox_container">
-              <input id="home" type="checkbox" name="reset" value="Reset"  checked />  <!--- creates several different forms, creates a checkbox to be checked, the value of the 'name' attribute along with the value of the 'value' attribute are sent together to server if checkbox is checked, 'checked' attribute makes the checkbox the default checked checkbox --->
+              <label  id="reset" for="reset" > <!--- enables users to either click on the form control or the label to select, the 'for' attribute states which form control the label belongs to --->
+                HOME
+              </label>
+              <div class="checkbox_container">
+                <input id="home" type="checkbox" name="reset" value="Reset"  checked />  <!--- creates several different forms, creates a checkbox to be checked, the value of the 'name' attribute along with the value of the 'value' attribute are sent together to server if checkbox is checked, 'checked' attribute makes the checkbox the default checked checkbox --->
+              </div>
             </div>
-            </div>
+
           </form>
         </div>
 
@@ -110,11 +110,20 @@
 
 
 <!---  Main Gallery --->
+
+    <div id="photo_gallery"  title="album_gallery">
+      <div id="holder">
+
+      </div>
+    </div>
+
+     <!---
      <section id="photo_gallery"  title="album_gallery">
        <div id="holder">
 
        </div>
      </section>
+     --->
 
   <!---  End! main gallery --->
 

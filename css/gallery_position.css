@@ -1,21 +1,4 @@
 
-aside {
-  position: fixed;
-}
-
-/*  Filter & Search Forms */
-aside#left_nav {
-  left: 2%;
-}
-
-aside div form#search_form input {
-  /*display: inline-block;*/
-}
-
-div.checkbox_container {
-  display: inline-block;
-}
-
 
 .preview {
   position: fixed;
@@ -46,7 +29,7 @@ aside#thumbnail_scroll {
 /* MAIN GALLERY */
 
 
-section#photo_gallery {
+#photo_gallery {
   position: static;
 }
 

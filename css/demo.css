@@ -37,7 +37,7 @@ a {
 	text-decoration: none;
 }
 
-h1, h2, h5 {
+/*h1, */ h2, h5 {
 	margin: 20px 20px 30px 20px;
 	font-size: 56px;
 	color: #fff;
@@ -46,6 +46,7 @@ h1, h2, h5 {
 	font-weight: 700;
 	text-shadow: 1px 1px 3px #e0d1bc;
 }
+
 
 h1 span, h5 {
 	font-size: 18px;
