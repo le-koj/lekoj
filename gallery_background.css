@@ -1,28 +1,4 @@
-body.body_container {
-  background-color: #87898c;
-  background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
-}
 
-#mission_statement {
-  background-color: #c0c0c0;
-  background-image: url("https://www.transparenttextures.com/patterns/buried.png");
-}
-
-hr {
-  visibility: hidden;
-  background-color: #292929;
-  box-shadow: 1px 1px 10px black;
-}
-
-
-.preview {
-/*background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");*/
-/*  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);  */
-}
 
 .previewbackground {
   background: #e4ebe9 url(../images/texture3.jpg) repeat top left;

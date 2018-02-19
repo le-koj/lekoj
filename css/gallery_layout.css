@@ -1,3 +1,7 @@
+body.body_container {
+  background-color: #87898c;
+  background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
+}
 
     /*  [ Page Info & Mission statement ]   */
 #title_head {
@@ -23,6 +27,9 @@
   -webkit-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
   -moz-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
   border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+
+  background-color: #c0c0c0;
+  background-image: url("https://www.transparenttextures.com/patterns/buried.png");
 }
 
 #project_title {
@@ -324,6 +331,7 @@ img#beta{
   min-width: 490px;
 
   margin: 0 auto;
+  margin-top: 4px;
 
   /* set display as grid */
   display: grid;
@@ -430,7 +438,7 @@ img.pop {
 }
 
 
-/*  Aside-Right, Upcoming Photos  */
+    /*  [ Thumbnail images ]  */
 #thumbnail_scroll {
   top: 12em;
   right:1%;
@@ -488,9 +496,10 @@ img.pop {
      -moz-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
           border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
 }
+    /*  [ END Thumbnail images ]  */
 
 
-/* Footer */
+    /* [ Footer ] */
 footer {
   width: 100%;
   margin: 0 auto;
@@ -503,32 +512,6 @@ footer {
   padding-bottom: 3px;
   /*min-width: 345px;*/
 }
-
-.link{
-  text-align: center;
-  /*border: 1px solid pink;*/
-  width: 100%;
-  float: right;
-  padding-right: 2%;
-  padding-left: 3%;
-  margin-right: 50%;
-}
-
-.link:hover {
-  box-shadow: inset 0 0 5px #000000;
-  -webkit-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
-     -moz-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
-          border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
-}
-
-#contacts {
-  left: 41.7%;
-}
-
-#credits {
-  right: 20%;
-}
-
 
 #copyright {
   float: left;
