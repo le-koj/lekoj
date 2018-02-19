@@ -33,10 +33,10 @@ var dataSrc = [["Richmond, 1st City" , 1, "Architecture", "Le Koj", "800 x 1422 
 var album = new AlbumMaker(dataSrc);         // initiate AlbumMaker
 
 // DOM structure for 'album maker'
-var portraitDOM= '<figure class="frame" id="alpha_gallery" data-category="" ><div class= "album"><img class= "pop" src= "" alt= ""/></div></figure>';
+var portraitDOM= '<figure class="frame" id="alpha_gallery" data-category="" ><img class= "pop" src= "" alt= ""/></figure>';
 
 // DOM structure for 'thumbnail maker'
 var thumbnailDOM= '<div class= "thumbnail" id=""><img class= "thumbnail_image" src= ""/></div>' ;
 
-album.createGallery(portraitDOM, '#holder');                    // build main gallery
+album.createGallery(portraitDOM, '#photo_gallery');                    // build main gallery
 album.createThumbnail(thumbnailDOM, '#thumbnail_scroll');    // build thumbnail gallery

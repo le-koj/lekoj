@@ -32,7 +32,7 @@ function GO() {
 
   this.album = {itself : iAlbum,
                 Figures : $('.frame'),
-                Photos : $('div.album img'),
+                Photos : $('.frame img'),
                 OffsetTop : albumOffsetTop(),
                 Height : iAlbum.height()
               };
@@ -51,7 +51,7 @@ function GO() {
   //this.defaultDisplay = $('.frame').css('display');
 
   this.navBar= $('div.codrops-top clearfix');     // selects navBar
-  this.pageHead= $('section#title_head');         // select <section> with "page info and mission-statement"
+  this.pageHead= $('#title_head');         // select <section> with "page info and mission-statement"
   this.leftNav= $('aside#left_nav');              // select filter box
   this.footer= $('#footer');                      // select footer
   this.contacts = $('#contacts');                 // select contacts tab

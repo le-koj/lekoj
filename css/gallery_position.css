@@ -18,17 +18,6 @@
 }
 
 
-/* MAIN GALLERY */
-
-#photo_gallery {
-  position: static;
-}
-
-figure#alpha_gallery {
-  position: static;
-}
-
-
 /* Footer */
 footer#footer {
   position: fixed;

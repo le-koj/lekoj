@@ -19,7 +19,7 @@
   grid-template-areas: "project_title"
                        "parent_name";
 
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   -webkit-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
   -moz-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
   border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
@@ -303,40 +303,54 @@ label {
   justify-self: center;
 }
 
+img#alpha{
+  width: 100%;
+}
+
+img#beta{
+  width: 100%;
+}
+
     /*  [ END Filter & Search Forms ] */
 
 
     /* [ MAIN GALLERY ] */
 
 #photo_gallery {
-  /*border: 2px solid black;*/
-  margin: 0 auto;
   width: 70%;
-
-  padding-left: .5em;
-  padding-right: .5em;
   min-width: 490px;
-}
 
-
-
-#holder {
-  /*border: 1px solid black;*/
-  width: 100%;
   margin: 0 auto;
-}
 
+  /* set display as grid */
+  display: grid;
+
+  /* set as 1-column grid */
+  grid-template-columns: [start] 100% [end];
+
+  /* set as 1-row grid */
+  grid-template-rows: auto;
+
+  /* set as multi-row grid */
+  grid-auto-flow: row;
+
+  /*border: 1px solid black;*/
+  -webkit-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+     -moz-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+          border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+}
 
 figure#alpha_gallery {
   /*border: 2px solid black;*/
-  margin-left: 2.5%;
   margin-bottom: 5%;
-  width: 98%;
+  width: 100%;
   padding: .5%;
-  min-width: 210px;
-  display: block;
-}
 
+  /*border: 1px solid blue;*/
+  -webkit-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+     -moz-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+          border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+}
 
 figure#beta_gallery {
   /*border: 2px solid black;*/
@@ -348,84 +362,53 @@ figure#beta_gallery {
   min-width: 210px;
 }
 
-
-
 figcaption{
-  /*border: 1px solid black;*/
   width: 258px;
-  /*margin: 1%;
-  padding: .2%; */
+  text-shadow: 0 1px 0 white;
   min-width: 210px;
+
+  height: auto;
+
+  /*border: 1px solid red;*/
+  -webkit-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+     -moz-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+          border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
 }
 
+.caption_wrapper {
+  width: 100%;
+  height: auto;
 
-.c1, .c2, .c3 {
-  margin-bottom: .3%;
+  /*border: 1px solid black;*/
+  -webkit-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+     -moz-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+          border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
 }
 
-.c1 div, .c2 div, .c3 div {
+.captions {
+  list-style-type: none;
   display: inline-block;
+  margin: 2px;
+  padding: 5px;
+
+  -webkit-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+     -moz-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+          border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+
+  box-shadow: inset 0 0 3px black;
 }
 
-#dimension {
-  width: 80px;
-  /*border: 1px solid black;
-  padding-left: 10%;*/
+#photo_gallery img{
+  width: 100%;
+  -webkit-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+     -moz-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+          border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
 }
 
-#location {
-  width: 140px;
-  float: right;
-  /*border: 1px solid black;*/
+img.pop {
+  padding-bottom: 30px;
+	background: radial-gradient(closest-side at 50% 95%, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 90%);
 }
-
-#camera {
-  width: 50px;
-  /*padding-left: 10%;
-  border: 1px solid black;*/
-}
-
-
-#cSpace {
-  width: 120px;
-  padding-left: 5%;
-  /*border: 1px solid black;*/
-}
-
-
-#fLength {
-  width: 50px;
-  float: right;
-  /*border: 1px solid black;*/
-}
-
-
-#aperture {
-  width: 49%;
-  /*border: 1px solid black;
-  padding-left: 10%;*/
-}
-
-
-#shutter {
-  width: 50px;
-  float: right;
-  /*border: 1px solid black;*/
-}
-
-
-#divider1 {
-  width: 1px;
-  margin-left: 5%;
-}
-
-
-#divider21 {
-  width: 1px;
-  margin-left: 5%;
-}
-
-
   /* [ END MAIN GALLERY ] */
 
 

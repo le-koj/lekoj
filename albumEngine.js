@@ -34,15 +34,21 @@ function createGallery(DOM_Structure, Appender, srcPrefix = 'images/') {
      _picName = this.inventory.list[i];                                         // get picture name
 
      //create caption
+     _caption = "<figcaption><ul class='caption_wrapper' > <li class='captions' id='dimension'>" + this.inventory.dict[_picName].dimension + "</li> <li class='captions' id='location' >" + this.inventory.dict[_picName].location + "</li>"
+                + "<li class='captions' id='camera' >" + this.inventory.dict[_picName].camInfo[0] + "</li> <li class='captions' id='cSpace'>" + this.inventory.dict[_picName].camInfo[1] + "</li> <li class='captions' id='fLength' >" + this.inventory.dict[_picName].camInfo[2] + "</li>"
+                + "<li class='captions' id='aperture' >" + this.inventory.dict[_picName].camInfo[3] + "</li> <li class='captions' id='shutter' >" + this.inventory.dict[_picName].camInfo[4] + "</li> </ul></figcaption>" ;
+
+    /*
      _caption = "<figcaption><div class='c1' > <div id='dimension'>" + this.inventory.dict[_picName].dimension + "</div> <div id='divider1' >|</div> <div id='location' >" + this.inventory.dict[_picName].location + "</div> </div>"
                 + "<div class='c2' > <div id='camera' >" + this.inventory.dict[_picName].camInfo[0] + "</div> <div id='divider21' >|</div> <div id='cSpace'>" + this.inventory.dict[_picName].camInfo[1] + "</div> <div id='divider22' >|</div> <div id='fLength' >" + this.inventory.dict[_picName].camInfo[2] + "</div> </div>"
                 + "<div class='c3' > <div id='aperture' >" + this.inventory.dict[_picName].camInfo[3] + "</div> <div id='divider3' >|</div> <div id='shutter' >" + this.inventory.dict[_picName].camInfo[4] + "</div> </div></figcaption>" ;
-
+    */
+    
      $(DOM_Structure)
        .filter('.frame')
           .attr('data-category',this.inventory.dict[_picName].category)
         .end()
-       .find('div img')                                                              // get 'img' object
+       .find('img')                                                              // get 'img' object
          .attr('src',srcPrefix.concat(this.inventory.dict[_picName].id).concat('.jpg'))   // add image source
          .attr('alt',_picName)                                                       // add image alternative to screen reader
          .attr('id', this.inventory.dict[_picName].id)                               // add image id
