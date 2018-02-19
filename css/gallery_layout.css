@@ -126,7 +126,7 @@ aside {
   display: grid;
 
   /* set 1-column grid */
-  grid-template-columns: [start] 115px [end];
+  grid-template-columns: [start] 100% [end];
 
   /* set as 2-row-grid */
   grid-template-rows: [start] 45px [middle] auto [end];
@@ -238,10 +238,9 @@ div.views{
 
 #filter_form {
   grid-area: filter_form;
-  width: 98%;
+  width: 95%;
   padding: 5px;
   margin: 5px auto;
-  margin-right: 1.5px;
 
   background-color: #292929;
   background-image: url("https://www.transparenttextures.com/patterns/maze-black.png");
@@ -251,7 +250,7 @@ div.views{
   display: grid;
 
   /* set as 1-column grid */
-  grid-template-columns: [start] 98% [end];
+  grid-template-columns: [start] 100% [end];
 
   /* set as multi-row */
   grid-template-rows: [start] auto [end];
@@ -261,6 +260,10 @@ div.views{
 
   /* set default grid of new elements */
   grid-auto-flow: row;
+
+  -webkit-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+     -moz-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+          border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
 }
 
 input {
