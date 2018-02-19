@@ -18,36 +18,6 @@
 }
 
 
-/* Footer */
-footer#footer {
-  position: fixed;
-  bottom: 0px;
-  clear: both;
-}
-
-footer ul li {
-  display: inline-block;
-}
-
-#contacts {
-  position: absolute;
-}
-
-#credits {
-  position: absolute;
-}
-
-#copyright{
-  position: relative;
-  top: 0.2em;
-}
-
-.link{
-  position: relative;
-  top: 0.2em;
-}
-
-
 /*    ABOUT PAGE */
 
 .icons {
