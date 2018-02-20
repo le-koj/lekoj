@@ -108,8 +108,8 @@ function lBClick() {
 function figFilter() {
 
   var _Objects = new GO(),
-      _default = $('#default');                                 // variable to hold default view 
-         _uCat = $("input:not(:checked)"),                          // object to hold all unchecked checkboxes
+      _default = $('#default'),                                 // variable to hold default view
+         _uCat = $("input:not(:checked)");                         // object to hold all unchecked checkboxes
 
 
   var _filHome = $('#home:checked');
