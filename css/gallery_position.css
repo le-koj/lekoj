@@ -1,18 +1,1 @@
 
-
-.preview {
-  position: fixed;
-  top: 0px;
-}
-
-.previewbackground {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-}
-
-.preview figure {
-  position: relative;
-}

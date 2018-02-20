@@ -685,7 +685,11 @@ img.pop {
   /* [ END MAIN GALLERY ] */
 
 
+    /* [ Preview ]  */
 .preview {
+  position: fixed;
+  top: 0px;
+
   padding: 4em;
   width: 100%;
   margin: 0 auto;
@@ -693,11 +697,38 @@ img.pop {
 }
 
 .preview figure {
-  /*width: 60%;*/
+  position: relative;
+
   height: 98%;
   margin: 10 auto;
   /*border: 1px solid green;*/
 }
+
+.preview_image {
+    display: block;
+    height: 100%;
+    width: auto;
+    margin: 0 auto;
+}
+
+.previewbackground {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+
+  background: #e4ebe9 url(../images/texture3.jpg) repeat top left;
+  opacity: 0.9;
+
+ -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+     -ms-filter: blur(1px);
+      -o-filter: blur(1px);
+         filter: blur(1px);
+}
+
+    /* [ END Preview ] */
 
 
     /*  [ Thumbnail images ]  */

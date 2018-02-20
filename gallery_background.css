@@ -1,11 +1,1 @@
 
-
-.previewbackground {
-  background: #e4ebe9 url(../images/texture3.jpg) repeat top left;
- -webkit-filter: blur(1px);
-  -moz-filter: blur(1px);
-  -o-filter: blur(1px);
-  -ms-filter: blur(1px);
-  filter: blur(1px);
-  opacity: 0.9;
-}
