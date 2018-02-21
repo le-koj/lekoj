@@ -7,7 +7,8 @@
 		    <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Le Koj" />
 		    <link rel="shortcut icon" href="../favicon.ico">
-        <link rel="stylesheet" type="text/css" href="css/gallery_layout.css" />
+        <link rel="stylesheet" type="text/css" media="screen and (max-width: 420px)" href="css/smallLayout.css" />
+        <link rel="stylesheet" type="text/css" media="screen and (min-width: 960px)" href="css/gallery_layout.css" />
         <script type="text/javascript"  src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
 		    <script type="text/javascript" src="js/modernizr.custom.46884.js"></script>
 	</head>
@@ -16,6 +17,12 @@
 <!--- header    --->
 
 			<div class="codrops-top clearfix">   <!--- 5-column-1-row grid --->
+
+        <div class="collapse-icon" hidden="hidden">
+          <span class="dot-icon"></span>
+          <span class="dot-icon"></span>
+          <span class="dot-icon"></span>
+        </div>
 
 				<a href="about.html" id="homebutton">   <!--- 2-column-1-row grid --->
           <div id="logo"><img id="logo_image" src="images/logo.png" alt = "MitchKoj logo" /></div>

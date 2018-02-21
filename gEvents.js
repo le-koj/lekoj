@@ -77,7 +77,8 @@ function feedback() {
   minTop= _Objects.document.ScrollTop;      // get the top scroll position
 
   // get thumbnailBox current display parameter
-  var _thumbnailDisplay = _Objects.thumbnailBox.itself.css("display");
+  var _thumbnailDisplay = _Objects.thumbnailBox.itself.css("display"),
+      _thumbnailLeft = _Objects.thumbnailBox.itself.css("left");
 
   if (_thumbnailDisplay == "none") {          // condition to check for thumbnailBox visibility
     _Objects.footer.hide();                   // hide footer element only
@@ -85,6 +86,10 @@ function feedback() {
   } else {
     _Objects.faders.hide();                   // hide select elements
     _Objects.faders.fadeIn('5000');          // fade in select elements
+  }
+
+  if (_thumbnailLeft == '0px') {
+    return;
   }
 
   _Events.thumbTop();                      // initiate method to adjust thumbnailBox top position
@@ -143,8 +148,8 @@ function figFilter() {
     return
   }
 
-  if (uCat.length == $('input:checkbox').length) {
-    _home.attr('checked','checked');
+  if (_uCat.length == $('input:checkbox').length) {
+    _filHome.attr('checked','checked');
     _Objects.album.Figures.fadeIn();
     return;
   }
@@ -153,8 +158,8 @@ function figFilter() {
   var filCat,
       figCat;
 
-  for (var i = 0; i < uCat.length; ++i) {
-    filCat = uCat.eq(i).attr('value');
+  for (var i = 0; i < _uCat.length; ++i) {
+    filCat = _uCat.eq(i).attr('value');
 
     for (var j = 0; j < _Objects.album.Figures.length; ++j) {
       figCat = _Objects.album.Figures.eq(j).attr('data-category');
