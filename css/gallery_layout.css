@@ -623,13 +623,11 @@ figure#alpha_gallery {
 }
 
 figure#beta_gallery {
-  /*border: 2px solid black;*/
-  margin-left: 2.5%;
   margin-bottom: 5%;
-  width: 30%;
+  width: 90%;
   padding: .5%;
-  display: inline-block;
-  min-width: 210px;
+
+  /*border: 1px solid blue;*/
 }
 
 figcaption{

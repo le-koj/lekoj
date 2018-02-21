@@ -50,9 +50,9 @@ function thumbTop() {
       magicScrollTop2= 0.25*_maxtop;
 
   if (_Objects.document.ScrollTop < magicScrollTop1) {
-    _Objects.thumbnailBox.itself.css('top','14em');
+    _Objects.thumbnailBox.itself.css('top','12em');
   } else if (! (_Objects.document.ScrollTop  > magicScrollTop2)) {
-    _Objects.thumbnailBox.itself.css('top','14em');
+    _Objects.thumbnailBox.itself.css('top','12em');
   } else {
     _Objects.thumbnailBox.itself.css('top','8em');
   };    // end if-else condition
@@ -76,10 +76,19 @@ function feedback() {
   var _Events = new GE();
   minTop= _Objects.document.ScrollTop;      // get the top scroll position
 
-  _Objects.faders.hide();                   // hide select elements
-  _Objects.faders.fadeIn('5000');          // fade in select elements
-  _Events.thumbTop();                                 // initiate method to adjust thumbnailBox top position
-  _Events.thumbScroller();                            // initiate method to scroll thumbnail pictures
+  // get thumbnailBox current display parameter
+  var _thumbnailDisplay = _Objects.thumbnailBox.itself.css("display");
+
+  if (_thumbnailDisplay == "none") {          // condition to check for thumbnailBox visibility
+    _Objects.footer.hide();                   // hide footer element only
+    _Objects.footer.fadeIn('5000');          // fade in footer element only
+  } else {
+    _Objects.faders.hide();                   // hide select elements
+    _Objects.faders.fadeIn('5000');          // fade in select elements
+  }
+
+  _Events.thumbTop();                      // initiate method to adjust thumbnailBox top position
+  _Events.thumbScroller();                 // initiate method to scroll thumbnail pictures
 
 };  // End feedback method
 
@@ -87,9 +96,17 @@ function feedback() {
 // method to manipulate left button click
 function rBClick() {
   var _Objects = new GO();
+  _Objects.album.itself
+    .css("grid-template-columns", "[start] repeat(3, 1fr) [end]")
+    .end();
+
   _Objects.album.Figures
     .attr('id', 'beta_gallery')
     .end();
+
+  _Objects.thumbnailBox.itself
+    .css("display","none")
+    .end()
 }   // END rBClick method
 
 
@@ -97,9 +114,17 @@ function rBClick() {
 function lBClick() {
 
   var _Objects = new GO();
+  _Objects.album.itself
+    .css("grid-template-columns", "[start] 100% [end]")
+    .end();
+
   _Objects.album.Figures
     .attr('id','alpha_gallery')
     .end();
+
+  _Objects.thumbnailBox.itself
+    .css("display","grid")
+    .end()
 
 }   // END rBClick method
 
