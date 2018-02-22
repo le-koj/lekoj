@@ -30,11 +30,28 @@ function binder(selector, action, response) {
 
 // method to fade in preview
 function prev(prop) {
-  var _Objects = new GO();
+  var _Objects = new GO(),
+      _figCaptionHtml = $(this).parent().find('figcaption').html(),   // get inner Html of figcaption
+      _figcaptionDisplay = $(this).parent().find('figcaption').css('display');   // get display of figcaption
+
   _Objects.thumbnailBox.prevStyle();                             // setup preview css layout
 
-  var imageSource= $(this).attr('src');                                 // get image source of clicked imaged
+  var imageSource= $(this).attr('src'),                           // get image source of clicked imaged
+       _imageName= $(this).attr('alt');                           // get name of image
+
+  var previewNameDOM = '<div id= "image_name">' + _imageName + '</div>';
+
   _Objects.thumbnailBox.prevImage.attr('src',imageSource);       // update preview image with image source
+
+  // if figcaption display is none
+  // change preview figcaption inner html to figcaption inner Html
+  if (_figcaptionDisplay == 'none') {
+    _Objects.thumbnailBox.Preview.find('figcaption')
+      .html(previewNameDOM + _figCaptionHtml);
+  } else {
+    _Objects.thumbnailBox.Preview.find('figcaption')
+      .html(previewNameDOM);
+  }
 
   _Objects.thumbnailBox.Preview.fadeIn('100');                   // fade preview in
 

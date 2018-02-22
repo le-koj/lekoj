@@ -752,6 +752,26 @@ img.pop {
     margin: 0 auto;
 }
 
+#image_name {
+  display: block;
+  margin: 10px auto;
+  margin-left: 100%;
+  text-align: center;
+  width: 100%;
+
+	font-family: expletus-sans, sans-serif;
+	font-size: 15px;
+	color: #d4af37;
+	letter-spacing: 2px;
+	text-shadow: 1px 1px 0 #000,
+							 1px 2px 0 #000,
+							 1px 3px 0 #000000,
+							 1px 3px 0 #191919,
+							 1px 2px 0 #000;
+
+  /*border: 1px solid green;*/
+}
+
 .previewbackground {
   position: absolute;
   top: 0px;

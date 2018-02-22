@@ -691,6 +691,21 @@ img.pop {
 						border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
 }
 
+#image_name {
+	margin-left: 5px;
+	margin-bottom: 5px;
+	font-family: expletus-sans, sans-serif;
+	font-size: 15px;
+	color: #d4af37;
+	/*padding-right: 2px;*/
+	letter-spacing: 2px;
+	text-shadow: 1px 1px 0 #000,
+							 1px 2px 0 #000,
+							 1px 3px 0 #000000,
+							 1px 3px 0 #191919,
+							 1px 2px 0 #000;
+}
+
     /* [ END Preview ] */
 
 
