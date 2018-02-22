@@ -633,6 +633,7 @@ img#beta{
 
   margin: 0 auto;
   margin-top: 4px;
+  margin-bottom: 10px;
 
   /* set display as grid */
   display: grid;

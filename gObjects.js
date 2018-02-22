@@ -57,6 +57,8 @@ function GO() {
   this.contacts = $('#contacts');                 // select contacts tab
   this.credits = $('#credits');                   // select credits tab
   this.faders= $('#thumbnail_scroll,#footer');    // select thumbnail and footer
+  this.CollapseIcon = $('collapse-icon');          // select collapse icon
+
 
   // equation to determine thumbnail new scrollTop
   this.varDocScrollTop= diffTop;
@@ -101,11 +103,18 @@ function scroll() {
 
 //css manipulation
 function prevStyle() {
-  var _Objects = new GO();
+  var _Objects = new GO(),
+      _thumbnailLeft = _Objects.thumbnailBox.itself.css("left");
 
   _Objects.thumbnailBox.Preview
     .css('height',(0.99 * _Objects.viewport.Height))
     .css('max-height',(0.999 * _Objects.viewport.Height));
+
+    // use top position of thumbnailbox to recognize small media
+    if (_thumbnailLeft == '0px') {
+      _Objects.thumbnailBox.Preview.css('display','grid');
+    }
+
 
 }   // End prevStyle method
 

@@ -18,7 +18,7 @@
 
 			<div class="codrops-top clearfix">   <!--- 5-column-1-row grid --->
 
-        <div class="collapse-icon" hidden="hidden">
+        <div class="collapse-icon" hidden="hidden"  onclick="$('aside#left_nav').toggle()">
           <span class="dot-icon"></span>
           <span class="dot-icon"></span>
           <span class="dot-icon"></span>
@@ -132,6 +132,7 @@
             resp.binder(elObj.button.Alpha, 'click', resp.lBClick);
             resp.binder(elObj.button.Beta, 'click', resp.rBClick);
             resp.binder(elObj.checkbox, 'click', resp.figFilter);
+
             document.onscroll = resp.feedback;   // bind scroll action to document
             elObj.contacts.hover(resp.onHove, resp.onLeave);
             elObj.credits.hover(resp.onHove, resp.onLeave);

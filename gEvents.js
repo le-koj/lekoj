@@ -109,6 +109,25 @@ function rBClick() {
     .attr('id', 'beta_gallery')
     .end();
 
+  _thumbnailLeft = _Objects.thumbnailBox.itself.css("left");
+
+  // use top position of thumbnailbox to recognize small media
+  if (_thumbnailLeft == '0px') {
+    _Objects.album.Figures.find('figcaption')
+      .css('display','none')
+      .end();
+
+    _Objects.pageHead
+      .css('top', '2.3em')
+      .css('margin-top', '0')
+      .end();
+
+    _Objects.album.itself
+      .css('margin-top', '6.5em')
+      .css('margin-bottom', '15px')
+      .end();
+  }
+
   _Objects.thumbnailBox.itself
     .css("display","none")
     .end()
@@ -126,6 +145,23 @@ function lBClick() {
   _Objects.album.Figures
     .attr('id','alpha_gallery')
     .end();
+
+  _thumbnailLeft = _Objects.thumbnailBox.itself.css("left");
+
+  // use top position of thumbnailbox to recognize small media
+  if (_thumbnailLeft == '0px') {
+    _Objects.album.Figures.find('figcaption')
+      .show();
+
+    _Objects.pageHead
+      .css('top', '3em')
+      .css('margin-top', '40px')
+      .end();
+
+    _Objects.album.itself
+      .css('margin-top', '10em')
+      .end();
+  }
 
   _Objects.thumbnailBox.itself
     .css("display","grid")
