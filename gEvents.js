@@ -13,6 +13,7 @@ function GE() {
   this.closeArt = closeArt;
   this.onHove = onHove;
   this.onLeave = onLeave;
+  this.thumbnailBoxHeightShift = thumbnailBoxHeightShift;
 
 }   // End gallery events constructor
 
@@ -58,21 +59,36 @@ function prev(prop) {
 }   // End prev method
 
 
-// method to change top position of thumbnailBox
-function thumbTop() {
-  var _Objects = new GO();
+// method to calculate new thumbnailBox top position
+function thumbnailBoxHeightShift(object) {
 
-  var _maxtop = _Objects.document.MaxTop('doc'),
+  var _maxtop = object.document.MaxTop('doc'),
       magicScrollTop1= 0.02*_maxtop,
       magicScrollTop2= 0.25*_maxtop;
 
-  if (_Objects.document.ScrollTop < magicScrollTop1) {
-    _Objects.thumbnailBox.itself.css('top','12em');
-  } else if (! (_Objects.document.ScrollTop  > magicScrollTop2)) {
-    _Objects.thumbnailBox.itself.css('top','12em');
-  } else {
-    _Objects.thumbnailBox.itself.css('top','8em');
-  };    // end if-else condition
+      if (object.document.ScrollTop < magicScrollTop1) {
+        object.thumbnailBox.itself.css('top','12em');
+      } else if (! (object.document.ScrollTop  > magicScrollTop2)) {
+        object.thumbnailBox.itself.css('top','12em');
+      } else {
+        object.thumbnailBox.itself.css('top','8em');
+      };    // end if-else condition
+}     // END thumbnailBoxHeightShift method
+
+
+// method to change top position of thumbnailBox
+function thumbTop(g_event) {
+  var _Objects = new GO();
+
+  var _min_width = $('body').css('width'),   /* get body width */
+      _width_int = _min_width.slice(0, _min_width.length-2);   /* get numerical characters of string */
+
+  // condition to end execution
+  if (parseInt(_width_int) < 960) {    // width greater than min-width of largest media query
+      return;
+  }
+
+  g_event.thumbnailBoxHeightShift(_Objects);    // adjust thumbnail box top position
 
   _Objects.thumbnailBox.itself.trigger("show");
 };  // End thumbTop method
@@ -109,7 +125,7 @@ function feedback() {
     return;
   }
 
-  _Events.thumbTop();                      // initiate method to adjust thumbnailBox top position
+  _Events.thumbTop(_Events);                      // initiate method to adjust thumbnailBox top position
   _Events.thumbScroller();                 // initiate method to scroll thumbnail pictures
 
 };  // End feedback method
@@ -126,10 +142,12 @@ function rBClick() {
     .attr('id', 'beta_gallery')
     .end();
 
-  _thumbnailLeft = _Objects.thumbnailBox.itself.css("left");
+  var _min_width = $('body').css('width'),   /* get body width */
+      _width_int = _min_width.slice(0, _min_width.length-2);   /* get numerical characters of string */
 
+  console.log(_width_int);
   // use top position of thumbnailbox to recognize small media
-  if (_thumbnailLeft == '0px') {
+  if (parseInt(_width_int) < 421) {
     _Objects.album.Figures.find('figcaption')
       .css('display','none')
       .end();
@@ -141,8 +159,22 @@ function rBClick() {
 
     _Objects.album.itself
       .css('margin-top', '6.5em')
-      .css('margin-bottom', '15px')
       .end();
+  }   // end small layout manipulation
+
+  // condition to end execution
+  if (parseInt(_width_int) < 960 && parseInt(_width_int) > 420) {    // width greater than min-width of largest media query
+    _Objects.album.Figures.find('figcaption')
+      .css('display','none')
+      .end();
+
+      _Objects.album.itself
+        .css('width', '90%')
+        .css('margin', '0 auto')
+        .css('margin-top', '6.5em')
+        .css('margin-bottom', '10px')
+        .css('margin-left', '5%')
+        .end();
   }
 
   _Objects.thumbnailBox.itself
@@ -163,10 +195,12 @@ function lBClick() {
     .attr('id','alpha_gallery')
     .end();
 
-  _thumbnailLeft = _Objects.thumbnailBox.itself.css("left");
+  var _min_width = $('body').css('width'),   /* get body width */
+      _width_int = _min_width.slice(0, _min_width.length-2);   /* get numerical characters of string */
 
+  console.log(_width_int);
   // use top position of thumbnailbox to recognize small media
-  if (_thumbnailLeft == '0px') {
+  if (parseInt(_width_int) < 421) {
     _Objects.album.Figures.find('figcaption')
       .show();
 
@@ -178,6 +212,20 @@ function lBClick() {
     _Objects.album.itself
       .css('margin-top', '10em')
       .end();
+  }
+
+  // condition to end execution
+  if (parseInt(_width_int) < 960 && parseInt(_width_int) > 420) {    // width greater than min-width of largest media query
+    _Objects.album.Figures.find('figcaption')
+      .show();
+
+      _Objects.album.itself
+        .css('width', '70%')
+        .css('margin', '0')
+        .css('margin-top', '6.5em')
+        .css('margin-bottom', '10px')
+        .css('margin-left', '5%')
+        .end();
   }
 
   _Objects.thumbnailBox.itself

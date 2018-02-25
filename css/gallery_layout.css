@@ -741,7 +741,7 @@ img.pop {
   position: relative;
 
   height: 98%;
-  margin: 10 auto;
+  margin: 5 auto;
   /*border: 1px solid green;*/
 }
 
@@ -798,8 +798,8 @@ img.pop {
   right:1%;
 
   width: 17%;
-  min-width: 150px;
-  max-width: 150px;
+  min-width: 140px;
+  max-width: 140px;
   max-height: 60%;
   overflow-y: scroll;
 

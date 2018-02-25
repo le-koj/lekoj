@@ -40,7 +40,7 @@ a {
   z-index: 9999;
 
 	line-height: 24px;
-	font-size: 9px;
+	font-size: 10px;
   font-family: Cambria, Georgia, serif;
   text-transform: uppercase;
 
@@ -210,8 +210,8 @@ a {
     /*  [ Page Info & Mission statement ]   */
 #title_head {
 	position: absolute;
-	top: 3em;
-  margin-top: 40px;
+	top: 2em;
+  margin-top: 5px;
 	width: 100%;
   min-width: 320px;
   text-align: center;
@@ -523,8 +523,9 @@ img#beta{
   width: 70%;
   min-width: 320px;
 
-  margin: 0 auto;
-  margin-top: 10em;
+  /*margin: 0 auto;*/
+	margin-left: 5%;
+  margin-top: 6.5em;
 	margin-bottom: 10px;
 
   /* set display as grid */
@@ -647,10 +648,15 @@ img.pop {
 }
 
 .previewbackground {
-	grid-area: preview;
+	position: fixed;
+	display: block;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+
 
   background: #e4ebe9 url(../images/texture3.jpg) repeat top left;
-  opacity: 0.9;
+  opacity: 0.5;
 
  -webkit-filter: blur(1px);
     -moz-filter: blur(1px);
@@ -664,6 +670,8 @@ img.pop {
 	z-index: 1;
 	justify-self: center;
 	align-self: center;
+
+	margin-top: 10em;
 
   width: 100%;
 
@@ -701,75 +709,66 @@ img.pop {
 
 
     /*  [ Thumbnail images ]  */
-#thumbnail_scroll {
-  top: 2.1em;
-  left:0px;
-	/*z-index: 999;*/
+		#thumbnail_scroll {
+		  top: 6.5em;
+		  right:1%;
 
-  width: 100%;
-	height: 50px;
-  /*min-width: 319px;*/
-  overflow-x: auto;
-	overflow-y: hidden;
+		  width: 17%;
+		  /*min-width: 150px;*/
+		  max-width: 150px;
+		  max-height: 60%;
+		  overflow-y: scroll;
 
-	padding-top: .5px;
+		  padding-top: 2px;
+		  padding-bottom: 2px;
 
-	/*margin: 1px auto;*/
-	margin-left: 0px;
-	/*margin-right: 40px;*/
+		  /* set display as grid */
+		  display: grid;
 
-  /*padding-top: 2px;
-  padding-bottom: 2px;*/
+		  /* set as 1-column grid */
+		  grid-template-columns: [start] 100% [end];
 
-  /* set display as grid */
-  display: grid;
+		  /* set as multi-row grid */
+		  grid-auto-flow: row;
 
-	/* set as multi-column grid */
-	/*grid-template-columns: auto;*/
+		  -webkit-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+		     -moz-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+		          border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
 
-	/* set as 1-row grid */
-	grid-template-rows: [start] 50px [end];
+		  box-shadow: inset 0 0 10px black;
 
-	/* set as 1-row grid */
-	grid-auto-columns: auto;
+		  background-color: #c0c0c0;
+		  background-image: url("https://www.transparenttextures.com/patterns/buried.png");
+		}
 
-  /* set as multi-row grid */
-  grid-auto-flow: column;
+		.thumbnail {
+		  width: 90%;
+		  margin: 5px auto;
+		  padding: 2px;
 
-  -webkit-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
-     -moz-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
-          border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+		  /* set as grid */
+		  display: grid;
 
-  box-shadow: inset 0 0 10px black;
+		  /* set as 1-column grid */
+		  grid-template-columns: [start] 100% [end];
 
-  background-color: #c0c0c0;
-  background-image: url("https://www.transparenttextures.com/patterns/buried.png");
-}
+		  /* set as 1-row grid */
+		  grid-template-rows: [start] auto [end];
 
-.thumbnail {
-	align-self: center;
-  height: 100%;
-  /*margin: 5px;*/
-  padding: 2px;
+		  /*border: 1px solid green;*/
+		  -webkit-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+		     -moz-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+		          border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+		}
 
-  /* set as grid */
-  display: block;
+		#thumbnail_scroll img{
+		  width: 100%;
 
-  /*border: 1px solid green;*/
-  -webkit-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
-     -moz-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
-          border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
-}
-
-#thumbnail_scroll img{
-  height: 95%;
-	/*width: 50px;*/
-
-  /*border: 1px solid red;*/
-  -webkit-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
-     -moz-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
-          border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
-}
+		  /*border: 1px solid red;*/
+		  -webkit-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+		     -moz-border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+		          border-radius: .5em .5em .5em .5em / .5em .5em .5em .5em ;
+		}
     /*  [ END Thumbnail images ]  */
 
 
@@ -875,7 +874,7 @@ footer {
 
 #values h2 {
   font-family: expletus-sans, sans-serif;
-  font-size: 20px;
+  font-size: 30px;
   color: #FFDF00;
   padding-right: 2px;
   letter-spacing: 3px;
