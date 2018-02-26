@@ -1,0 +1,23 @@
+# application configuration
+
+application: lekoj      # application name
+version: 1              # application version
+runtime: python27       # runtime program language
+api_version: 1          # application program interface version
+threadsafe: yes         # threadsafe gets yes/true
+
+# handlers for posted/requested urls
+handlers:
+- url: /static            # '/static' file paths
+  static_dir: static      # static folder directory
+
+- url: .*                 # all other file paths
+  script: main.app        # 'main' module
+
+# framework libraries in use
+libraries:
+- name: webapp2           # library name
+  version: "2.5.2"        # library version
+
+- name: jinja2            # template library name
+  version: latest         # library version

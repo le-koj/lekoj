@@ -7,12 +7,12 @@
 		    <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Le Koj" />
 		    <link rel="shortcut icon" href="../favicon.ico">
-        <link rel="stylesheet" type="text/css" media="screen and (max-width: 420px)" href="css/smallLayout.css" />
-        <link rel="stylesheet" type="text/css" media="screen and (min-width: 421px) and (max-width: 959px)" href="css/mediumLayout.css" />
-        <link rel="stylesheet" type="text/css" media="screen and (min-width: 960px)" href="css/gallery_layout.css" />
+        <link rel="stylesheet" type="text/css" media="screen and (max-width: 420px)" href="static/css/smallLayout.css" />
+        <link rel="stylesheet" type="text/css" media="screen and (min-width: 421px) and (max-width: 959px)" href="static/css/mediumLayout.css" />
+        <link rel="stylesheet" type="text/css" media="screen and (min-width: 960px)" href="static/css/gallery_layout.css" />
         <script src="//use.edgefonts.net/expletus-sans.js"></script>
         <script type="text/javascript"  src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-		    <script type="text/javascript" src="js/modernizr.custom.46884.js"></script>
+		    <script type="text/javascript" src="static/js/modernizr.custom.46884.js"></script>
 	</head>
 
 	<body class="about_container">
@@ -20,14 +20,14 @@
 
     <div class="codrops-top clearfix">   <!--- 5-column-1-row grid --->
 
-      <a href="about.html" id="homebutton">   <!--- 2-column-1-row grid --->
-        <div id="logo"><img id="logo_image" src="images/logo.png" alt = "MitchKoj logo" /></div>
+      <a href="/about" id="homebutton">   <!--- 2-column-1-row grid --->
+        <div id="logo"><img id="logo_image" src="static/images/logo.png" alt = "MitchKoj logo" /></div>
         <div id="right">LE KOJ</div>
       </a>
 
-      <a href="index.html" id="exhibit">exhibit</a>
+      <a href="/index" id="exhibit">exhibit</a>
       <a id="icredit" style="cursor:default" >Images by <strong>LE KOJ</strong></a>
-      <a id="galleryButton" href="index.html"><strong>PORTRAIT GALLERY</strong></a>
+      <a id="galleryButton" href="/index"><strong>PORTRAIT GALLERY</strong></a>
 
     </div>
 
@@ -39,13 +39,13 @@
     </div>
 
     <div  id="icon_wrapper">    <!--- 5-column-6-row grid --->
-      <div class="icons" id="coding" data-article= "programmer"><img id="laptop" src="images/coding.png" alt="computer"></div>
-      <div class="icons" id="fotography" data-article= "photographer"><img id="canonFoto" src="images/photography.png" alt="canon camera"></div>
-      <div class="icons" id="filming" data-article= "videographer"><img id="canonFilm" src="images/film.png" alt="canon camera"></div>
-      <div class="icons" id="media" data-article= "mediaDesign"><img id="lens" src="images/lens.png" alt="lens"></div>
+      <div class="icons" id="coding" data-article= "programmer"><img id="laptop" src="static/images/coding.png" alt="computer"></div>
+      <div class="icons" id="fotography" data-article= "photographer"><img id="canonFoto" src="static/images/photography.png" alt="canon camera"></div>
+      <div class="icons" id="filming" data-article= "videographer"><img id="canonFilm" src="static/images/film.png" alt="canon camera"></div>
+      <div class="icons" id="media" data-article= "mediaDesign"><img id="lens" src="static/images/lens.png" alt="lens"></div>
     </div>
 
-    <div class="icons" id="selfie" data-article= "info"><img id="dreadlocks" src="images/selfie.png" alt="author's image"></div>
+    <div class="icons" id="selfie" data-article= "info"><img id="dreadlocks" src="static/images/selfie.png" alt="author's image"></div>
 
     <section class="main-article" hidden="hidden">
 
@@ -152,19 +152,18 @@
     </section>
 
 
-
 <!--- footer      --->
 
-    <footer id="footer">
+   <footer id="footer">
       <ul>  <!--- creates an unordered list --->
         <li class="fOptions"  id="copyright">Copyright (c) 2017 <span id="aName">Le Koj</span></li> <!--- creates a list item in ul --->
       </ul>
     </footer>
 
-    <script type="text/javascript" src="inventory.js"></script>
-    <script type="text/javascript" src="albumEngine.js"></script>
-    <script type="text/javascript" src="gObjects.js"></script>
-    <script type="text/javascript" src="gEvents.js"></script>
+    <script type="text/javascript" src="static/js/inventory.js"></script>
+    <script type="text/javascript" src="static/js/albumEngine.js"></script>
+    <script type="text/javascript" src="static/js/gObjects.js"></script>
+    <script type="text/javascript" src="static/js/gEvents.js"></script>
     <script type="text/javascript" >
       (function($){
         $(document).ready( function() {

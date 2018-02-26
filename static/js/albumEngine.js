@@ -17,7 +17,7 @@ function AlbumMaker(dataSource) {
 
 // method to create main gallery
 // takes DOM structure, appender, optional source filepath prefix
-function createGallery(DOM_Structure, Appender, srcPrefix = 'images/') {
+function createGallery(DOM_Structure, Appender, srcPrefix = 'static/images/') {
 
    // verify arguments
    if (!DOM_Structure || !Appender) {
@@ -43,7 +43,7 @@ function createGallery(DOM_Structure, Appender, srcPrefix = 'images/') {
                 + "<div class='c2' > <div id='camera' >" + this.inventory.dict[_picName].camInfo[0] + "</div> <div id='divider21' >|</div> <div id='cSpace'>" + this.inventory.dict[_picName].camInfo[1] + "</div> <div id='divider22' >|</div> <div id='fLength' >" + this.inventory.dict[_picName].camInfo[2] + "</div> </div>"
                 + "<div class='c3' > <div id='aperture' >" + this.inventory.dict[_picName].camInfo[3] + "</div> <div id='divider3' >|</div> <div id='shutter' >" + this.inventory.dict[_picName].camInfo[4] + "</div> </div></figcaption>" ;
     */
-    
+
      $(DOM_Structure)
        .filter('.frame')
           .attr('data-category',this.inventory.dict[_picName].category)
@@ -68,7 +68,7 @@ function createGallery(DOM_Structure, Appender, srcPrefix = 'images/') {
 
 
 // method to create thumbnail gallery
-function createThumbnail(DOM_Structure, Appender, srcPrefix = 'images/') {
+function createThumbnail(DOM_Structure, Appender, srcPrefix = 'static/images/') {
 
      // verify arguments
      if (!DOM_Structure || !Appender) {
