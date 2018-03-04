@@ -1,4 +1,5 @@
-import webapp2, os, jinja2
+import webapp2, os, jinja2, model, Picturefile
+
 
 # setup template directory
 template_dir = os.path.join(os.path.dirname(__file__))
@@ -32,6 +33,10 @@ class AboutLinkHandler(MainHandler):
 
         # variable to hold rendered template
         rendered_template = self._render_template('about.html')
+
+        # create model instances
+        #creator = model.Creator()
+        #creator.create(Picturefile.dataSrc)
 
         # send out rendered template
         self.response.out.write(rendered_template)
