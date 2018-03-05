@@ -71,6 +71,15 @@
               </div>
             </div>
 
+            {% for item in category %}
+              <div class='cell'>
+                <label  for='{{item}}' >{{item}}</label>
+                <div class='checkbox_container'>
+                  <input  id='{{item}}' type='checkbox' name='filter' value='{{item}}' />
+                </div>
+              </div>
+            {% endfor %}
+
           </form>
 
         <!--- [END filter options] --->
@@ -81,7 +90,11 @@
 
 <!---   Aside-Right, Upcoming Photos  --->
       <aside  id="thumbnail_scroll">    <!--- set as 1-column-multi-row --->
-
+      {% for item in gallery %}
+        <div class= "thumbnail" >
+          <img class= "thumbnail_image" id="{{item.key.id()}}" src= "static/images/{{item.key.id()}}.jpg" alt= "{{item.name}}" />
+        </div>
+      {% endfor %}
       </aside>
 
       <!--- End! aside-right, upcoming photos  --->
@@ -104,7 +117,22 @@
 <!---  Main Gallery --->
 
     <div id="photo_gallery" >   <!--- set as 1-column-multi-row grid --->
-      <!--- <div id="holder"> </div> --->
+      {% for item in gallery %}
+      <figure class="frame" id="alpha_gallery" data-category="{{item.category}}" >
+        <img class= "pop" id="{{item.key.id()}}" src= "static/images/{{item.key.id()}}.jpg" alt= "{{item.name}}"/>
+
+        <figcaption>
+          <ul class='caption_wrapper' >
+            <li class='captions' id='dimension'>{{item.dimension}}</li>
+            <li class='captions' id='location' >{{item.location}}</li>
+            {% for info in item.camera_info %}
+              <li class='captions' >{{info}}</li>
+            {% endfor %}
+          </ul>
+        </figcaption>
+
+      </figure>
+      {% endfor %}
     </div>
 
   <!---  End! main gallery --->
@@ -135,8 +163,6 @@
             resp.binder(elObj.checkbox, 'click', resp.figFilter);
 
             document.onscroll = resp.feedback;   // bind scroll action to document
-            elObj.contacts.hover(resp.onHove, resp.onLeave);
-            elObj.credits.hover(resp.onHove, resp.onLeave);
         });
       })(jQuery);
     </script>

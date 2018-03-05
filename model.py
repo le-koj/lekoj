@@ -17,6 +17,7 @@ class Creator():
 
     def create(self,array):
         ARRAY_FILE = array
+        _picId = 1
 
         # loop through array
         for i in ARRAY_FILE:
@@ -29,5 +30,8 @@ class Creator():
 
             for cam_info in i[6]:
                 picture.camera_info.append(cam_info)
+
+            picture.key = ndb.Key(PictureInfo, _picId)
+            _picId += 1     # increment _picId
 
             picture.put()

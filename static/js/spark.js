@@ -38,5 +38,5 @@ var portraitDOM= '<figure class="frame" id="alpha_gallery" data-category="" ><im
 // DOM structure for 'thumbnail maker'
 var thumbnailDOM= '<div class= "thumbnail" id=""><img class= "thumbnail_image" src= ""/></div>' ;
 
-album.createGallery(portraitDOM, '#photo_gallery');                    // build main gallery
-album.createThumbnail(thumbnailDOM, '#thumbnail_scroll');    // build thumbnail gallery
+//album.createGallery(portraitDOM, '#photo_gallery');                    // build main gallery
+//album.createThumbnail(thumbnailDOM, '#thumbnail_scroll');    // build thumbnail gallery
