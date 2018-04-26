@@ -1,4 +1,6 @@
-import webapp2, os, jinja2, model, Picturefile
+import webapp2, os, jinja2, model, Picturefile, logging
+import cloudstorage, mimetypes
+from google.appengine.api import app_identity
 
 
 # setup template directory
@@ -17,6 +19,24 @@ class MainHandler(webapp2.RequestHandler):
 
         # variable to hold rendered template
         rendered_template = self._render_template('index.html', context=context)
+
+        #>>>>>>>>>>>>>> code test <<<<<<<<<<<<<<<<<<<<#
+        bucket_name = app_identity.get_default_gcs_bucket_name()
+        content_t = mimetypes.guess_type('20.jpg')[0]
+        real_path = os.path.join('/','shining-axon-201518.appspot.com','20.jpg')
+
+        try:
+            with cloudstorage.open(real_path, 'r') as f:
+                self.response.headers.add_header('Conten-Type', content_t)
+                self.response.out.write(f.read())
+        except cloudstorage.errors.NotFoundError:
+                self.abort(404)
+
+        #gcs_file = gcs.open('/lekoj.com/images/20.jpg')
+        #contents = gcs_file.read()
+        #gcs_file.close()
+
+        #>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<#
 
         # send out rendered template
         self.response.out.write(rendered_template)
