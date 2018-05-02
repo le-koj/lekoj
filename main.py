@@ -1,6 +1,8 @@
 import webapp2, os, jinja2, model, Picturefile, logging
 import cloudstorage, mimetypes
 from google.appengine.api import app_identity
+#from google import cloud
+
 
 
 # setup template directory
@@ -21,16 +23,31 @@ class MainHandler(webapp2.RequestHandler):
         rendered_template = self._render_template('index.html', context=context)
 
         #>>>>>>>>>>>>>> code test <<<<<<<<<<<<<<<<<<<<#
-        bucket_name = app_identity.get_default_gcs_bucket_name()
-        content_t = mimetypes.guess_type('20.jpg')[0]
-        real_path = os.path.join('/','shining-axon-201518.appspot.com','20.jpg')
+        """storage_client = cloud.client.Client()
+        bucket_name = 'shining-axon-201518.appspot.com'
+        bucket = storage_client.get_bucket(bucket_name)
+        blobs = bucket.list_blobs()
+        self.response.out.write(blobs)"""
 
+        bucket_name = app_identity.get_default_gcs_bucket_name()
+        print(bucket_name)
+        #content_t = mimetypes.guess_type('text_file.txt')[0]
+        #real_path = os.path.join('/',bucket_name,'IMG_0100.JPG')
+        #real_path = os.path.join('/',bucket_name,'text_file.txt')
+        #real_path = '/shining-axon-201518.appspot.com'
+
+        """
         try:
             with cloudstorage.open(real_path, 'r') as f:
-                self.response.headers.add_header('Conten-Type', content_t)
                 self.response.out.write(f.read())
         except cloudstorage.errors.NotFoundError:
                 self.abort(404)
+
+
+        with cloudstorage.open(real_path,'w') as f:
+            f.write('this is a test access') """
+
+
 
         #gcs_file = gcs.open('/lekoj.com/images/20.jpg')
         #contents = gcs_file.read()
@@ -40,6 +57,7 @@ class MainHandler(webapp2.RequestHandler):
 
         # send out rendered template
         self.response.out.write(rendered_template)
+
 
     # method to final template for response
     def _render_template(self, template_name, context=None):
