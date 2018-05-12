@@ -1,7 +1,7 @@
 # application configuration
 
-#application: shining-axon-201518      # application name
-#version: 1              # application version
+application: shining-axon-201518      # application name
+version: 1              # application version
 runtime: python27       # runtime program language
 api_version: 1          # application program interface version
 threadsafe: yes         # threadsafe gets yes/true
@@ -13,6 +13,9 @@ handlers:
 
 - url: .*                 # all other file paths
   script: main.app        # 'main' module
+
+- url: /lekoj/static/images
+  script: main.app 
 
 # framework libraries in use
 libraries:
