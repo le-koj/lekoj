@@ -30,8 +30,9 @@ class MainHandler(webapp2.RequestHandler):
 
         #>>>>>>>>>>>>>> code test <<<<<<<<<<<<<<<<<<<<#
         # get cloud storage bucket
-        #bucket_name = os.environ.get('BUCKET_NAME', app_identity.get_default_gcs_bucket_name())
 
+        #bucket_name = os.environ.get('BUCKET_NAME', app_identity.get_default_gcs_bucket_name()
+  
         # collect file from bucket
         #real_path = '/' + bucket_name + '/1.jpg'
         #self.createMultiFiles(bucket_name, images)
