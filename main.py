@@ -30,15 +30,14 @@ class MainHandler(webapp2.RequestHandler):
 
         #>>>>>>>>>>>>>> code test <<<<<<<<<<<<<<<<<<<<#
         # get cloud storage bucket
-        bucket_name = os.environ.get('BUCKET_NAME',
-                                    app_identity.get_default_gcs_bucket_name())
+        #bucket_name = os.environ.get('BUCKET_NAME', app_identity.get_default_gcs_bucket_name())
 
         # collect file from bucket
-        real_path = '/' + bucket_name + '/1.jpg'
+        #real_path = '/' + bucket_name + '/1.jpg'
         #self.createMultiFiles(bucket_name, images)
 
         # read images from bucket
-        image_file = self.readFile(real_path)
+        #image_file = self.readFile(real_path)
 
         """storage_client = cloud.client.Client()
         bucket_name = 'shining-axon-201518.appspot.com'
@@ -74,7 +73,7 @@ class MainHandler(webapp2.RequestHandler):
 
         # send out rendered template
         self.response.out.write(rendered_template)
-        self.response.out.write(image_file)
+        #self.response.out.write(image_file)
 
 
     # method to final template for response
