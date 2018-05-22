@@ -1,5 +1,6 @@
 import webapp2, os, jinja2, model, Picturefile, logging
-import cloudstorage as gcs
+#import cloudstorage as gcs
+from google.cloud import storage
 import mimetypes
 from google.appengine.api import app_identity
 from google.appengine.ext import blobstore
@@ -39,12 +40,13 @@ class MainHandler(webapp2.RequestHandler):
         # read images from bucket
         #image_file = self.readFile(real_path)
 
-        """storage_client = cloud.client.Client()
+        storage_client = storage.Client()
         bucket_name = 'shining-axon-201518.appspot.com'
         bucket = storage_client.get_bucket(bucket_name)
         blobs = bucket.list_blobs()
         self.response.out.write(blobs)
 
+        """
         bucket_name = app_identity.get_default_gcs_bucket_name()
         print(bucket_name)
         #content_t = mimetypes.guess_type('text_file.txt')[0]
@@ -62,7 +64,6 @@ class MainHandler(webapp2.RequestHandler):
 
         with cloudstorage.open(real_path,'w') as f:
             f.write('this is a test access') """
-
 
 
         #gcs_file = gcs.open('/lekoj.com/images/20.jpg')
